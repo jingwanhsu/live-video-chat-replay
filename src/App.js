@@ -53,7 +53,7 @@ function App() {
             const fileURL = URL.createObjectURL(e.target.files[0])
             setVideoURL(fileURL);
           }} /></p>
-          <p>Choose chats file: <input type="file" onChange={e => {
+          <p>Choose chats file: <input type="file" accept=".txt" onChange={e => {
             const fr = new FileReader();
             fr.onload = () => {
               const raw = fr.result;
