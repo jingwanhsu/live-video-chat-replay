@@ -11,6 +11,7 @@ function App() {
   const [startTimeStr, setStartTimeStr] = useState(localStorage.getItem('startTime') || '06/01/2022 19:00:00');
   const [shouldScroll, setShouldScroll] = useState(false);
   const chatroomRef = useRef(null);
+  const surveyUrl = 'https://forms.gle/Tm7gGJWEDQ9A8Nep6';
 
   const chats = allChats.filter(chat => chat[0] < currentTime).map(chat => chat[1]);
 
@@ -66,6 +67,7 @@ function App() {
             localStorage.setItem('startTime', e.target.value);
             setStartTimeStr(e.target.value);
           }} /></p>
+          <p>Any feedback: : <a href={surveyUrl} target="_blank">{surveyUrl}</a></p>
         </Cell>
         <Cell columns={3}>
           <div id="chatroom" ref={chatroomRef}>
