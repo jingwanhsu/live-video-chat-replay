@@ -67,7 +67,7 @@ function App() {
             localStorage.setItem('startTime', e.target.value);
             setStartTimeStr(e.target.value);
           }} /></p>
-          <p>Any feedback: : <a href={surveyUrl} target="_blank">{surveyUrl}</a></p>
+          <p>Any feedback: <a href={surveyUrl} target="_blank">{surveyUrl}</a></p>
         </Cell>
         <Cell columns={3}>
           <div id="chatroom" ref={chatroomRef}>
